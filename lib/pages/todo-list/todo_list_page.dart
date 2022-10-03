@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:todo_list/models/todo.dart';
-import 'package:todo_list/widgets/todo_list_item.dart';
+import 'package:todo_list_2022/models/todo.dart';
+import 'package:todo_list_2022/widgets/todo_list_item.dart';
 
 class TodoListPage extends StatefulWidget {
   const TodoListPage({Key? key}) : super(key: key);

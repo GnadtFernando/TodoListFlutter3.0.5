@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:intl/intl.dart';
-import 'package:todo_list/models/todo.dart';
+import 'package:todo_list_2022/models/todo.dart';
+
 
 class TodoListItem extends StatelessWidget {
   const TodoListItem({
@@ -18,6 +19,18 @@ class TodoListItem extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 2),
       child: Slidable(
+        actionExtentRatio: 0.20,
+        actionPane: const SlidableStrechActionPane(),
+        secondaryActions: [
+          IconSlideAction(
+            color: Colors.red,
+            icon: Icons.delete,
+            caption: 'Deletar',
+            onTap: () {
+              onDelete(todo);
+            },
+          ),
+        ],
         child: Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(4),
@@ -43,18 +56,6 @@ class TodoListItem extends StatelessWidget {
             ],
           ),
         ),
-        actionExtentRatio: 0.20,
-        actionPane: const SlidableStrechActionPane(),
-        secondaryActions: [
-          IconSlideAction(
-            color: Colors.red,
-            icon: Icons.delete,
-            caption: 'Deletar',
-            onTap: () {
-              onDelete(todo);
-            },
-          ),
-        ],
       ),
     );
   }

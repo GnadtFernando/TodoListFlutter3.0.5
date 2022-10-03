@@ -1,6 +1,5 @@
- import 'package:flutter/material.dart';
-
-import 'pages/todo-list/todo_list_page.dart';
+import 'package:flutter/material.dart';
+import 'package:todo_list_2022/pages/todo/todo_list_page.dart';
 
 void main() {
   runApp(const MyApp());
